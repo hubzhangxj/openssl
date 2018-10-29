@@ -5,4 +5,5 @@
   shell: cd /tmp && tar xvf build.openssl.tar.gz && rm -rf build.openssl.tar.gz
 
 - name: run install
-  shell: "cd /tmp/build.openssl && ./install.sh"
+  shell: "cd /tmp/build.openssl && ./config && make && make install && cp -rf ./apps/openssl /usr/bin"
+  #shell: "cd /tmp/build.openssl && ./install.sh"
